@@ -1,0 +1,80 @@
+{
+  "students": [
+    {
+      "student_id": "202400900",
+      "name": "Tatiana Kaado",
+      "age": 21,
+      "email": "tgk12@mail.aub.edu",
+      "registered_courses": [
+        "EECE330",
+        "EECE435L"
+      ]
+    },
+    {
+      "student_id": "S2026002",
+      "name": "Maya Khoury",
+      "age": 20,
+      "email": "maya.khoury@mail.aub.edu",
+      "registered_courses": [
+        "EECE435L"
+      ]
+    },
+    {
+      "student_id": "S2026003",
+      "name": "Omar Saleh",
+      "age": 22,
+      "email": "omar.saleh@mail.aub.edu",
+      "registered_courses": [
+        "EECE340"
+      ]
+    }
+  ],
+  "instructors": [
+    {
+      "instructor_id": "I001",
+      "name": "Dr. Lina Haddad",
+      "age": 41,
+      "email": "lina.haddad@aub.edu.lb",
+      "assigned_courses": [
+        "EECE340",
+        "EECE435L"
+      ]
+    },
+    {
+      "instructor_id": "I002",
+      "name": "Dr. Karim Nasser",
+      "age": 38,
+      "email": "karim.nasser@aub.edu.lb",
+      "assigned_courses": [
+        "EECE330"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "course_id": "EECE330",
+      "course_name": "Data Structures",
+      "instructor": "I002",
+      "enrolled_students": [
+        "202400900"
+      ]
+    },
+    {
+      "course_id": "EECE340",
+      "course_name": "Signals and Systems",
+      "instructor": "I001",
+      "enrolled_students": [
+        "S2026003"
+      ]
+    },
+    {
+      "course_id": "EECE435L",
+      "course_name": "Software Tools Laboratory",
+      "instructor": "I001",
+      "enrolled_students": [
+        "202400900",
+        "S2026002"
+      ]
+    }
+  ]
+}

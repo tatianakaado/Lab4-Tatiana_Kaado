@@ -1,0 +1,37 @@
+test_bad_json_shows_error_and_preserves_records (test_gui.GuiTests.test_bad_json_shows_error_and_preserves_records) ... ok
+test_create_student_with_registration (test_gui.GuiTests.test_create_student_with_registration) ... ok
+test_edit_dialog_uses_fields_for_record_type (test_gui.GuiTests.test_edit_dialog_uses_fields_for_record_type) ... ok
+test_initial_records_and_search (test_gui.GuiTests.test_initial_records_and_search) ... ok
+test_json_export_from_tk_import_into_qt (test_integration.InterfaceIntegrationTests.test_json_export_from_tk_import_into_qt) ... ok
+test_tk_creation_qt_edit_and_tk_readback (test_integration.InterfaceIntegrationTests.test_tk_creation_qt_edit_and_tk_readback) ... ok
+test_conflicting_assignment_preserves_records (test_regressions.AtomicImportTests.test_conflicting_assignment_preserves_records) ... ok
+test_database_reassignment_and_unassignment (test_regressions.AtomicImportTests.test_database_reassignment_and_unassignment) ... ok
+test_duplicate_email_rolls_back_deleted_records (test_regressions.AtomicImportTests.test_duplicate_email_rolls_back_deleted_records) ... ok
+test_duplicate_id_rolls_back_deleted_records (test_regressions.AtomicImportTests.test_duplicate_id_rolls_back_deleted_records) ... ok
+test_explicit_empty_payload_clears_database (test_regressions.AtomicImportTests.test_explicit_empty_payload_clears_database) ... ok
+test_invalid_shapes_preserve_all_records (test_regressions.AtomicImportTests.test_invalid_shapes_preserve_all_records) ... ok
+test_malformed_json_preserves_all_records (test_regressions.AtomicImportTests.test_malformed_json_preserves_all_records) ... ok
+test_missing_enrollment_target_rolls_back_deleted_records (test_regressions.AtomicImportTests.test_missing_enrollment_target_rolls_back_deleted_records) ... ok
+test_missing_field_preserves_all_records (test_regressions.AtomicImportTests.test_missing_field_preserves_all_records) ... ok
+test_missing_instructor_rolls_back_deleted_records (test_regressions.AtomicImportTests.test_missing_instructor_rolls_back_deleted_records) ... ok
+test_relationship_type_is_checked (test_regressions.AtomicImportTests.test_relationship_type_is_checked) ... ok
+test_seed_does_not_overwrite_instructor_only_database (test_regressions.AtomicImportTests.test_seed_does_not_overwrite_instructor_only_database) ... ok
+test_successful_import_replaces_and_preserves_both_relationship_sides (test_regressions.AtomicImportTests.test_successful_import_replaces_and_preserves_both_relationship_sides) ... ok
+test_instructor_entrypoint_is_bidirectional_and_idempotent (test_regressions.ReassignmentTests.test_instructor_entrypoint_is_bidirectional_and_idempotent) ... ok
+test_invalid_reassignment_preserves_current_link (test_regressions.ReassignmentTests.test_invalid_reassignment_preserves_current_link) ... ok
+test_reassignment_removes_old_link (test_regressions.ReassignmentTests.test_reassignment_removes_old_link) ... ok
+test_string_reassignment_cleans_tracked_old_link (test_regressions.ReassignmentTests.test_string_reassignment_cleans_tracked_old_link) ... ok
+test_unassign_removes_old_link (test_regressions.ReassignmentTests.test_unassign_removes_old_link) ... ok
+test_backup_and_restore (test_school_mgmt.DatabaseTests.test_backup_and_restore) ... ok
+test_crud (test_school_mgmt.DatabaseTests.test_crud) ... ok
+test_csv_export (test_school_mgmt.DatabaseTests.test_csv_export) ... ok
+test_json_round_trip (test_school_mgmt.DatabaseTests.test_json_round_trip) ... ok
+test_schema_and_relationships (test_school_mgmt.DatabaseTests.test_schema_and_relationships) ... ok
+test_course_links_student_and_instructor (test_school_mgmt.ModelTests.test_course_links_student_and_instructor) ... ok
+test_polymorphic_introductions (test_school_mgmt.ModelTests.test_polymorphic_introductions) ... ok
+test_validation_rejects_invalid_age_and_email (test_school_mgmt.ModelTests.test_validation_rejects_invalid_age_and_email) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 1.881s
+
+OK

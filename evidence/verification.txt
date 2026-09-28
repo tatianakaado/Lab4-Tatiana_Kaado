@@ -1,0 +1,19 @@
+Lab 4 source provenance
+
+Application source was combined from the supplied archives.
+Documentation and integration tests were added/adapted for Lab 4.
+
+tk_app.py: unchanged from Lab2_Tatiana_Kaado.zip; SHA256 35978a038356bb9396e06027fc5d82760dd15e6c6dc280c170b74200bd47f34d
+demo.py: unchanged from Lab2_Tatiana_Kaado.zip; SHA256 e2f2bedad173d54bdbb377eb2487e1c6f606a5e55aaf4a0a757c661a033e15c1
+pyqt_app.py: unchanged from Lab3_Tatiana_Kaado.zip; SHA256 287ba9e5758aec62536e7d21cb93e75457f5bc154992467d271c2895cb93d1d0
+school_mgmt/models.py: unchanged from Lab3_Tatiana_Kaado.zip; SHA256 e48d312d779c5b04831a3f571265a49cdb32390c21bd6602a22a985352234e7a
+school_mgmt/storage.py: unchanged from Lab3_Tatiana_Kaado.zip; SHA256 a9f90f93f214237e5e7ce94ab0195c7efa2789e1996cd4cf9bcde261cf56aaa2
+school_mgmt/__init__.py: unchanged from Lab3_Tatiana_Kaado.zip; SHA256 46ed8758a7ebade7d0831c47f2d81b25a4ea18eeb94aca70a0f1c481d1d35266
+data.json: unchanged from Lab3_Tatiana_Kaado.zip; SHA256 692d94b37a891e459c6bce33c4a1b3c6d01c3a02f251da8b94afe5eca529fb01
+database_schema.sql: unchanged from Lab3_Tatiana_Kaado.zip; SHA256 ed346f2f22b42542c263c3a16f75a45c64b6355e22448b3cf99861b283378300
+
+Verification: 32 tests passed, no skips.
+Command: .venv/bin/python -m unittest discover -s tests -v
+Documentation: build succeeded with warnings treated as errors.
+Command: LC_ALL=en_US.UTF-8 .venv/bin/python -m sphinx -b html -W --keep-going docs docs/_build/html
+GitHub creation/push, collaborator invitations, and Moodle submission: pending.
