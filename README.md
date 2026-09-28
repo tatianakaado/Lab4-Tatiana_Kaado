@@ -39,6 +39,37 @@ the same database. The two GUI frameworks run in separate processes with their
 own event loops; they share `school_mgmt` models, validation, and persistence.
 Tables do not automatically refresh when another running process changes data.
 
+## How Tkinter and PyQt work together
+
+Both interfaces import the same `Student`, `Instructor`, `Course`, and
+`DatabaseManager` classes from `school_mgmt`. Both default to the exact same
+`school.db` path beside the scripts, regardless of the terminal's current
+directory. A successful add, edit, or delete saves to SQLite immediately.
+Opening the other interface reads those saved records and relationships.
+There is no need to export JSON when switching interfaces in this project.
+
+```text
+tk_app.py   (Tkinter) ─┐
+                      ├─ school_mgmt models + DatabaseManager ─ school.db
+pyqt_app.py (PyQt5) ───┘
+```
+
+The integration is through shared application logic and persistent data.
+The interfaces are separate windows launched independently; live automatic
+synchronization between two open windows is not implemented.
+
+To demonstrate the integration manually:
+
+1. Run `python tk_app.py` and add a student with a unique ID and valid email.
+   Optionally select a course to enroll the student.
+2. Close Tkinter, then run `python pyqt_app.py` from this same project.
+3. Search for the student's email. The student and course enrollment appear.
+4. Select the student, choose **Edit selected**, and change the name.
+5. Close PyQt and reopen `python tk_app.py`. Search for the same email;
+   the updated name is displayed. Delete this test record when finished.
+
+## Using the application
+
 1. Use the Student, Instructor, and Course tabs to add records.
 2. Select an optional course when adding a student or instructor; choose an
    optional instructor when adding a course.
@@ -85,6 +116,19 @@ The integration tests create a record through Tkinter, read and edit it through
 PyQt, and check the result back in Tkinter. They also exercise JSON exchange
 between the interfaces using the shared backend.
 
+Latest verification: **32 tests passed, with no failures or skips**.
+The integration checks use real Tkinter and PyQt widgets with temporary
+databases; modal dialogs are supplied with automated test inputs.
+
+| Integration check | Verified result |
+| --- | --- |
+| Add a student and enrollment in Tkinter, then read in PyQt | Same student and enrollment persist |
+| Edit that student through PyQt, then refresh Tkinter | Updated name and age are visible; enrollment is retained |
+| Export JSON through Tkinter and import into a separate PyQt database | All records and relationships match |
+
+Full output: [evidence/tests.txt](evidence/tests.txt).
+Test implementation: [tests/test_integration.py](tests/test_integration.py).
+
 ## Git and submission
 
 Follow [GITHUB_SETUP.md](GITHUB_SETUP.md) to commit, publish, and submit the
@@ -92,8 +136,12 @@ repository link. For solo work, the Lab 4 handout does not require feature
 branches, pull requests, or a contribution breakdown. Team work requires the
 collaboration steps described in the handout.
 
-The local repository uses `main`, with a verified integration commit and a
-`v1.0` tag. Its configured remote is
-`https://github.com/tatianakaado/Lab4-Tatiana_Kaado.git`.
-The remote URL is a target only: GitHub repository creation and pushing are
-still pending account connection. The link becomes usable after publishing.
+Repository: [tatianakaado/Lab4-Tatiana_Kaado](https://github.com/tatianakaado/Lab4-Tatiana_Kaado).
+The `main` branch contains the project; `v1.0` identifies the initial verified
+integration. Later documentation updates appear on `main`.
+
+For a solo submission, upload this `README.md` and the repository link to
+Moodle. If the repository is private, give the instructor/TAs access using
+the GitHub accounts they provide. A GitHub Release is optional for solo work.
+For a team submission, also complete the handout's branch, pull request,
+review, release, and actual contribution-tracking requirements.

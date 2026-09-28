@@ -32,6 +32,6 @@ test_polymorphic_introductions (test_school_mgmt.ModelTests.test_polymorphic_int
 test_validation_rejects_invalid_age_and_email (test_school_mgmt.ModelTests.test_validation_rejects_invalid_age_and_email) ... ok
 
 ----------------------------------------------------------------------
-Ran 32 tests in 1.881s
+Ran 32 tests in 2.160s
 
 OK

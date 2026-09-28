@@ -16,4 +16,4 @@ Verification: 32 tests passed, no skips.
 Command: .venv/bin/python -m unittest discover -s tests -v
 Documentation: build succeeded with warnings treated as errors.
 Command: LC_ALL=en_US.UTF-8 .venv/bin/python -m sphinx -b html -W --keep-going docs docs/_build/html
-GitHub creation/push, collaborator invitations, and Moodle submission: pending.
+This log records local application verification. GitHub publishing, collaborator access, and Moodle submission are separate from these tests.
